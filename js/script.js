@@ -25,15 +25,22 @@ document.querySelectorAll('[data-theme-choice]').forEach((button) => {
   });
 });
 const page = root.dataset.page;
-const clientLogoFiles = {
-  ADANI: 'images/clients/adani.jpg',
-  TATA: 'images/clients/tata.svg',
-  GODREJ: null,
-  INFOSYS: 'images/clients/infosys.svg',
-  RELIANCE: 'images/clients/reliance2.png',
-  DLF: 'images/clients/dlf.svg',
-  MAHINDRA: 'images/clients/mahindra.png'
+const seoByPage = {
+  about: ['About Falcon Concrete Creation', 'Meet the Falcon Concrete Creation studio and its hand-finished approach to mineral surfaces.', 'images/luxury-interior.jpg'],
+  services: ['Services | Falcon Concrete Creation', 'Discover lime plaster, micro concrete, terrazzo and specialist flooring finishes by Falcon Concrete Creation.', 'images/services/lime-plaster.jpg'],
+  projects: ['Projects | Falcon Concrete Creation', 'View selected residential and hospitality interiors shaped by Falcon Concrete Creation mineral finishes.', 'images/luxury-interior.jpg'],
+  teams: ['Team | Falcon Concrete Creation', 'Meet the designers, finishers and material specialists behind Falcon Concrete Creation.', 'images/luxury-interior.jpg']
 };
+const seo = seoByPage[page];
+if (seo) {
+  [['theme-color', '#1e211c'], ['og:type', 'website'], ['og:title', seo[0]], ['og:description', seo[1]], ['og:image', seo[2]], ['twitter:card', 'summary']].forEach(([name, content]) => {
+    const meta = document.createElement('meta');
+    meta.setAttribute(name.startsWith('og:') ? 'property' : 'name', name);
+    meta.content = content;
+    document.head.appendChild(meta);
+  });
+}
+const clientLogoFiles = {};
 document.querySelectorAll('.client-mark').forEach((mark) => {
   const name = mark.querySelector('span')?.textContent.trim();
   const logoFile = clientLogoFiles[name];

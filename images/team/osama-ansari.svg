@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Osama Ansari avatar">
+  <rect width="400" height="440" fill="#f1eddf"/>
+  <circle cx="200" cy="140" r="78" fill="#d8a684"/>
+  <path d="M110 362c18-62 58-94 90-94s72 32 90 94" fill="#49553b"/>
+  <path d="M150 91h100v22H150z" fill="#49553b" opacity="0.18"/>
+  <circle cx="200" cy="136" r="18" fill="#f0d0ad"/>
+  <path d="M145 174c20 17 38 27 55 27s35-10 55-27" fill="none" stroke="#6c4329" stroke-width="8" stroke-linecap="round"/>
+  <text x="200" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#49553b">OA</text>
+</svg>

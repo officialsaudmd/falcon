@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Md Taj avatar">
+  <defs>
+    <linearGradient id="bg1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#d7c2a0"/>
+      <stop offset="100%" stop-color="#8e6a46"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="440" fill="#f3efe7"/>
+  <circle cx="200" cy="140" r="78" fill="#d9b08c"/>
+  <path d="M110 362c18-62 58-94 90-94s72 32 90 94" fill="#2d2d2d"/>
+  <rect x="140" y="90" width="120" height="30" rx="15" fill="#2d2d2d" opacity="0.15"/>
+  <path d="M140 170c18 22 44 34 60 34s42-12 60-34" fill="none" stroke="#7e4f32" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="200" cy="138" r="18" fill="#f0d0ad"/>
+  <text x="200" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#2d2d2d">MT</text>
+</svg>

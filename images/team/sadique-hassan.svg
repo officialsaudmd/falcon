@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Sadique Hassan avatar">
+  <defs>
+    <linearGradient id="bg3" x1="0" x2="1">
+      <stop offset="0%" stop-color="#e8d5ca"/>
+      <stop offset="100%" stop-color="#a86d5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="440" fill="#f4efed"/>
+  <circle cx="200" cy="140" r="78" fill="#d8a27c"/>
+  <path d="M110 362c18-62 58-94 90-94s72 32 90 94" fill="#3a2925"/>
+  <path d="M150 91h100v30H150z" fill="#3a2925" opacity="0.12"/>
+  <path d="M145 175c23 17 37 25 55 25s32-8 55-25" fill="none" stroke="#74462a" stroke-width="8" stroke-linecap="round"/>
+  <text x="200" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#3a2925">SH</text>
+</svg>

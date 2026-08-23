@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Mukabir Ansari avatar">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#dcded4"/>
+      <stop offset="100%" stop-color="#7a8d7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="440" fill="url(#bg2)"/>
+  <circle cx="200" cy="140" r="78" fill="#d6a78a"/>
+  <path d="M110 362c18-62 58-94 90-94s72 32 90 94" fill="#23362f"/>
+  <rect x="135" y="92" width="130" height="22" rx="11" fill="#23362f" opacity="0.15"/>
+  <circle cx="200" cy="136" r="18" fill="#f0d0ad"/>
+  <path d="M142 174c20 18 38 28 58 28s38-10 58-28" fill="none" stroke="#73492e" stroke-width="8" stroke-linecap="round"/>
+  <text x="200" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#23362f">MA</text>
+</svg>
