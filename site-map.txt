@@ -3,6 +3,7 @@ index.html - Home
 about.html - About Us
 services.html - Services
 projects.html - Projects
+clients.html - Clients and collaborators
 teams.html - Team
 quotation.html - Request a quote
 contact.html - Contact, email enquiry and studio map

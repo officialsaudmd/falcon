@@ -1,4 +1,9 @@
 const root = document.documentElement;
+const favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.type = 'image/jpeg';
+favicon.href = 'images/logo.jpg';
+document.head.appendChild(favicon);
 const loader = document.createElement('div');
 loader.className = 'site-loader';
 loader.setAttribute('role', 'status');
@@ -20,6 +25,26 @@ document.querySelectorAll('[data-theme-choice]').forEach((button) => {
   });
 });
 const page = root.dataset.page;
+const clientLogoFiles = {
+  ADANI: 'images/clients/adani.jpg',
+  TATA: 'images/clients/tata.svg',
+  GODREJ: null,
+  INFOSYS: 'images/clients/infosys.svg',
+  RELIANCE: 'images/clients/reliance2.png',
+  DLF: 'images/clients/dlf.svg',
+  MAHINDRA: 'images/clients/mahindra.png'
+};
+document.querySelectorAll('.client-mark').forEach((mark) => {
+  const name = mark.querySelector('span')?.textContent.trim();
+  const logoFile = clientLogoFiles[name];
+  if (!logoFile) return;
+  const logo = document.createElement('img');
+  logo.className = 'client-logo';
+  logo.src = logoFile;
+  logo.alt = `${name} logo`;
+  mark.prepend(logo);
+  mark.classList.add('has-logo');
+});
 const navigation = document.querySelector('.navbar-nav');
 const routes = [
   ['home', 'Home', 'index.html'],
@@ -27,6 +52,7 @@ const routes = [
   ['services', 'Services', 'services.html'],
   ['projects', 'Projects', 'projects.html'],
   ['teams', 'Team', 'teams.html'],
+  ['clients', 'Clients', 'clients.html'],
   ['quotation', 'Quote', 'quotation.html'],
   ['contact', 'Contact', 'contact.html']
 ];
@@ -65,6 +91,11 @@ document.querySelectorAll('form[action^="mailto:"]').forEach((form) => {
       return;
     }
     const details = [...new FormData(form)].map(([key, value]) => `${key}: ${value}`).join('\n');
+    if (form.classList.contains('project-form')) {
+      const whatsappMessage = `Hello Falcon Concrete Creation, I would like to discuss a project.\n\n${details}`;
+      window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+      return;
+    }
     const subject = form.classList.contains('quote-form') ? 'New quotation request - Falcon Concrete Creation' : 'New contact enquiry - Falcon Concrete Creation';
     window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(details)}`;
   });
