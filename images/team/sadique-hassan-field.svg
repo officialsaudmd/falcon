@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" role="img" aria-label="Sadique Hassan field specialist avatar">
+  <defs>
+    <linearGradient id="bgField" x1="0" x2="1">
+      <stop offset="0%" stop-color="#dfe7d7"/>
+      <stop offset="100%" stop-color="#6d846a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="440" fill="#f4f2ee"/>
+  <circle cx="200" cy="140" r="78" fill="#d5a680"/>
+  <path d="M110 362c18-62 58-94 90-94s72 32 90 94" fill="#2e3a2e"/>
+  <path d="M146 92c18-28 42-38 54-38s36 10 54 38" fill="none" stroke="#3c3a35" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="160" cy="140" r="8" fill="#3c3a35"/>
+  <circle cx="240" cy="140" r="8" fill="#3c3a35"/>
+  <path d="M158 178c18 15 28 22 42 22s24-7 42-22" fill="none" stroke="#7b4a2d" stroke-width="8" stroke-linecap="round"/>
+  <rect x="118" y="290" width="164" height="16" rx="8" fill="url(#bgField)" opacity="0.8"/>
+  <text x="200" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#2d352f">SH</text>
+</svg>
