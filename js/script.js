@@ -1,3 +1,10 @@
+const sanitizeText = (value = '') => String(value)
+  .replace(/[<>]/g, '')
+  .replace(/[\u0000-\u001F\u007F]/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim()
+  .slice(0, 2000);
+
 const root = document.documentElement;
 const favicon = document.createElement('link');
 favicon.rel = 'icon';
@@ -27,9 +34,10 @@ document.querySelectorAll('[data-theme-choice]').forEach((button) => {
 const page = root.dataset.page;
 const seoByPage = {
   about: ['About Falcon Concrete Creation', 'Meet the Falcon Concrete Creation studio and its hand-finished approach to mineral surfaces.', 'images/luxury-interior.jpg'],
-  services: ['Services | Falcon Concrete Creation', 'Discover lime plaster, micro concrete, terrazzo and specialist flooring finishes by Falcon Concrete Creation.', 'images/services/lime-plaster.jpg'],
+  services: ['Services | Falcon Concrete Creation', 'Discover lime plaster, micro concrete, terrazzo and specialist flooring finishes by Falcon Concrete Creation.', 'images/limeplasterwallandceilings/IMG-20250419-WA0038.jpg'],
   projects: ['Projects | Falcon Concrete Creation', 'View selected residential and hospitality interiors shaped by Falcon Concrete Creation mineral finishes.', 'images/luxury-interior.jpg'],
-  teams: ['Team | Falcon Concrete Creation', 'Meet the designers, finishers and material specialists behind Falcon Concrete Creation.', 'images/luxury-interior.jpg']
+  teams: ['Team | Falcon Concrete Creation', 'Meet the designers, finishers and material specialists behind Falcon Concrete Creation.', 'images/luxury-interior.jpg'],
+  brochure: ['Falcon Brochure | Falcon Concrete Creation', 'Falcon Concrete Creation brochure featuring luxury wall finishes, lime plaster and micro concrete surfaces for contemporary interiors.', 'images/luxury-interior.jpg']
 };
 const seo = seoByPage[page];
 if (seo) {
@@ -40,7 +48,20 @@ if (seo) {
     document.head.appendChild(meta);
   });
 }
-const clientLogoFiles = {};
+const clientLogoFiles = {
+  VIANAAR: 'images/clients/cl (1).jpg',
+  ISPARAVA: 'images/clients/cl (2).jpg',
+  SOKA: 'images/clients/cl (3).jpg',
+  'BEST LOCATION': 'images/clients/cl (4).jpg',
+  SIGNATURE: 'images/clients/cl (5).jpg',
+  MIRAAN: 'images/clients/cl (6).jpg',
+  'MILLION DOLLAR': 'images/clients/cl (7).jpg',
+  JAGLAX: 'images/clients/cl (8).jpg',
+  AZUL: 'images/clients/cl (9).jpg',
+  RICCO: 'images/clients/cl (10).jpg',
+  UNDERSOUND: 'images/clients/cl (11).jpg',
+  ANAROCK: 'images/clients/cl (12).jpg'
+};
 document.querySelectorAll('.client-mark').forEach((mark) => {
   const name = mark.querySelector('span')?.textContent.trim();
   const logoFile = clientLogoFiles[name];
@@ -89,22 +110,22 @@ if (themeSwitcher && !themeSwitcher.querySelector('[data-theme-choice="blue"]'))
     localStorage.setItem('falcon-theme', blueTheme.dataset.themeChoice);
   });
 }
-document.querySelectorAll('form[action^="mailto:"]').forEach((form) => { form.action = `mailto:${contactEmail}`; });
-document.querySelectorAll('form[action^="mailto:"]').forEach((form) => {
+document.querySelectorAll('form').forEach((form) => {
+  form.action = `https://wa.me/${whatsappNumber}`;
+  form.setAttribute('target', '_blank');
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
-    const details = [...new FormData(form)].map(([key, value]) => `${key}: ${value}`).join('\n');
-    if (form.classList.contains('project-form')) {
-      const whatsappMessage = `Hello Falcon Concrete Creation, I would like to discuss a project.\n\n${details}`;
-      window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-      return;
-    }
-    const subject = form.classList.contains('quote-form') ? 'New quotation request - Falcon Concrete Creation' : 'New contact enquiry - Falcon Concrete Creation';
-    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(details)}`;
+    const details = [...new FormData(form)].map(([key, value]) => `${sanitizeText(key)}: ${sanitizeText(value)}`).join('\n');
+    const whatsappMessage = form.classList.contains('project-form')
+      ? `Hello Falcon Concrete Creation, I would like to discuss a project.\n\n${details}`
+      : form.classList.contains('quote-form')
+        ? `Hello Falcon Concrete Creation, I would like a quotation.\n\n${details}`
+        : `Hello Falcon Concrete Creation, I would like to enquire about your services.\n\n${details}`;
+    window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
   });
 });
 document.querySelectorAll('a[href^="mailto:"]').forEach((link) => { link.href = `mailto:${contactEmail}?subject=Falcon%20Concrete%20Creation%20enquiry`; if (link.textContent.includes('hello@') || link.textContent.includes('falconconcrete')) link.firstChild.textContent = contactEmail; });
@@ -147,7 +168,30 @@ const userWorkImages = {
   'micro-concrete-floor': Array.from({ length: 9 }, (_, index) => `images/microconcereteflooring/concrete_floor (${index + 1}).jpg`),
   'epoxy-flooring': ['IMG-20251002-WA0019.jpg', 'IMG-20251002-WA0026.jpg', 'IMG-20251002-WA0037.jpg', 'IMG-20251004-WA0098.jpg', 'IMG-20251004-WA0111.jpg', 'IMG-20251004-WA0114.jpg', 'IMG-20251004-WA0117.jpg', 'IMG-20251004-WA0118.jpg', 'IMG-20251004-WA0120.jpg', 'IMG-20251025-WA0004.jpg', 'IMG-20251025-WA0006.jpg'].map((file) => `images/epoxyflooring/${file}`),
   'stucco-tile': ['Screenshot_20250712_164712_Instagram.jpg', 'Screenshot_20250712_174329_Instagram.jpg', 'Screenshot_20250712_174335_Instagram.jpg', 'Screenshot_20250712_174339_Instagram.jpg', 'Screenshot_20250712_192939_Instagram.jpg', 'Screenshot_20250712_193324_Instagram.jpg'].map((file) => `images/stuccopaintmarbelfinish/${file}`),
-  'marble-exterior': ['Screenshot_20250712_164712_Instagram.jpg', 'Screenshot_20250712_174329_Instagram.jpg', 'Screenshot_20250712_174335_Instagram.jpg', 'Screenshot_20250712_174339_Instagram.jpg', 'Screenshot_20250712_192939_Instagram.jpg', 'Screenshot_20250712_193324_Instagram.jpg'].map((file) => `images/stuccopaintmarbelfinish/${file}`)
+  'marble-exterior': [
+    'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1617104678098-c0d6ecf53d8c?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80'
+  ],
+  'metallic-3d-flooring': [
+    'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80'
+  ],
+  'industrial-flooring': [
+    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80'
+  ],
+  terrazzo: [
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80'
+  ]
 };
 const serviceSlugs = ['lime-plaster', 'micro-concrete-wall', 'micro-concrete-floor', 'terrazzo', 'epoxy-flooring', 'metallic-3d-flooring', 'industrial-flooring', 'stucco-tile', 'marble-exterior'];
 document.querySelectorAll('.service-card').forEach((card, index) => {
@@ -157,9 +201,9 @@ document.querySelectorAll('.service-card').forEach((card, index) => {
   if (slug && userWorkImages[slug]) card.querySelector('img')?.setAttribute('src', userWorkImages[slug][0]);
 });
 const finishOptions = {
-  'lime-plaster': ['02 / Lime plaster', 'Soft light.', 'Our lime plaster surfaces bring depth, tactility and a natural variation that changes beautifully throughout the day.', 'images/services/lime-plaster.jpg'],
-  'micro-concrete': ['02 / Micro concrete', 'Quiet structure.', 'Micro concrete brings a seamless mineral texture to walls that feels architectural, tactile and considered.', 'images/services/micro-concrete-wall.jpg'],
-  'stucco': ['02 / Stucco finish', 'Polished movement.', 'Stucco finishes create a softly reflective surface with hand-worked depth and a distinctly crafted character.', 'images/services/stucco-tiles.jpg']
+  'lime-plaster': ['02 / Lime plaster', 'Soft light.', 'Our lime plaster surfaces bring depth, tactility and a natural variation that changes beautifully throughout the day.', 'images/limeplasterwallandceilings/IMG-20250419-WA0038.jpg'],
+  'micro-concrete': ['02 / Micro concrete', 'Quiet structure.', 'Micro concrete brings a seamless mineral texture to walls that feels architectural, tactile and considered.', 'images/microconceretewallfinishexteriorandinterior_/20260822_171430.jpg'],
+  'stucco': ['02 / Stucco finish', 'Polished movement.', 'Stucco finishes create a softly reflective surface with hand-worked depth and a distinctly crafted character.', 'images/stuccopaintmarbelfinish/Screenshot_20250712_193324_Instagram.jpg']
 };
 const finishImage = document.querySelector('.feature-image[data-finish-image]');
 const finishTabs = document.querySelectorAll('.finish-tab');
@@ -189,10 +233,10 @@ if (page === 'service-detail') {
     'lime-plaster': ['Lime plaster', 'Breathable, hand-worked mineral surfaces with soft tonal movement.', userWorkImages['lime-plaster']],
     'micro-concrete-wall': ['Micro concrete wall', 'Seamless mineral texture for sculptural, modern interiors.', userWorkImages['micro-concrete-wall']],
     'micro-concrete-floor': ['Micro concrete flooring', 'A continuous, refined floor finish shown across a completed interior installation.', userWorkImages['micro-concrete-floor']],
-    terrazzo: ['Terrazzo work', 'Crafted aggregate surfaces with a distinctive, lasting character.', ['images/services/terrazzo.jpg']],
+    terrazzo: ['Terrazzo work', 'Crafted aggregate surfaces with a distinctive, lasting character.', userWorkImages.terrazzo],
     'epoxy-flooring': ['Epoxy flooring', 'Resilient, seamless protection for demanding commercial spaces.', userWorkImages['epoxy-flooring']],
-    'metallic-3d-flooring': ['Metallic & 3D flooring', 'Expressive depth and reflective movement for statement spaces.', ['images/services/metallic-flooring.jpg']],
-    'industrial-flooring': ['Industrial flooring', 'Built for impact, traffic and the everyday demands of work.', ['images/services/industrial-flooring.jpg']],
+    'metallic-3d-flooring': ['Metallic & 3D flooring', 'Expressive depth and reflective movement for statement spaces.', userWorkImages['metallic-3d-flooring']],
+    'industrial-flooring': ['Industrial flooring', 'Built for impact, traffic and the everyday demands of work.', userWorkImages['industrial-flooring']],
     'stucco-tile': ['Stucco & tile work', 'Decorative wall finishes and precise tile installation, beautifully resolved.', userWorkImages['stucco-tile']],
     'marble-exterior': ['Marble texture exterior', 'Weather-ready decorative texture for distinctive exterior walls and facades.', userWorkImages['marble-exterior']]
   };

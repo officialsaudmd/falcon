@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me https://api.whatsapp.com; img-src 'self' data: blob: https://images.unsplash.com https://images.unsplash.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self'; media-src 'self'; frame-src 'none'; upgrade-insecure-requests">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), interest-cohort=()">
+    <meta name="keywords" content="Falcon Concrete Creation team, wall finish experts Goa, concrete finish artisans, plaster specialists, flooring specialists, decorative coating team, micro concrete team, lime plaster craftsmen, stucco finish specialists, terrazzo professionals, industrial flooring team, epoxy coating team, marble texture experts, project managers, interior finish team, luxury wall design specialists, architecture finish professionals, Goa wall contractors, premium building finish team, surface finishing professionals, residential surface experts, commercial finish contractor team, hotel finish specialists, villa finish team, facade texture team, material specialists, construction finish consultants, architectural coatings team, decorative concrete specialists, premium finish artisans, wall texture team, design execution team, product specialists, luxury finish service team, surface treatment team, renovation finish specialists, expert construction finishers, mineral finish professionals, stone finish artisans, finishing consultants Goa, interior texture consultants, pattern and finish experts">
     <title>Team | Falcon Concrete Creation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,26 +25,27 @@
         <div class="container-fluid px-4 px-lg-5"><span>Luxury wall finishes / Lime plaster solutions</span></div>
     </div>
     <nav class="navbar navbar-expand-lg site-nav">
-        <div class="container-fluid px-4 px-lg-5"><a class="navbar-brand" href="index.html"><img src="images/logo.jpg"
-                    alt="Falcon Concrete Creation logo"><span>FALCON<span> CONCRETE CREATION</span></span></a><button
-                class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><i
-                    class="bi bi-list"></i></button>
-            <div class="collapse navbar-collapse" id="nav">
-                <ul class="navbar-nav mx-auto gap-lg-4 mb-3 mb-lg-0">
-                    <li><a class="nav-link" href="index.html">Home</a></li>
-                    <li><a class="nav-link" href="about.html">About</a></li>
-                    <li><a class="nav-link" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li><a class="nav-link active" href="teams.html">Team</a></li>
-                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html" aria-label="Falcon Concrete Creation home">
+                <img src="images/logo.jpg" alt="Falcon Concrete Creation logo">
+                <span>FALCON<span> CONCRETE CREATION</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" data-nav="home" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="about" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="services" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="projects" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-nav="team" href="teams.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="contact" href="contact.html">Contact</a></li>
                 </ul>
-                <div class="theme-switcher"><button class="theme-dot theme-ochre" data-theme-choice="ochre"
-                        aria-label="Ochre theme"></button><button class="theme-dot theme-forest"
-                        data-theme-choice="forest" aria-label="Forest theme"></button><button
-                        class="theme-dot theme-terracotta" data-theme-choice="terracotta"
-                        aria-label="Terracotta theme"></button><button class="theme-dot theme-blue"
-                        data-theme-choice="blue" aria-label="Blue theme"></button></div>
+                <div class="theme-switcher" aria-label="Colour theme">
+                    <button class="theme-dot theme-ochre" data-theme-choice="ochre" aria-label="Ochre theme"></button>
+                    <button class="theme-dot theme-forest" data-theme-choice="forest" aria-label="Forest theme"></button>
+                    <button class="theme-dot theme-terracotta" data-theme-choice="terracotta" aria-label="Terracotta theme"></button>
+                </div>
+                <a class="nav-link nav-action-link ms-lg-3" href="contact.html">Start a project <i class="bi bi-arrow-up-right ms-2"></i></a>
             </div>
         </div>
     </nav>

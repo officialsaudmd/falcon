@@ -4,8 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me https://api.whatsapp.com; img-src 'self' data: blob: https://images.unsplash.com https://images.unsplash.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self'; media-src 'self'; frame-src 'none'; upgrade-insecure-requests">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), interest-cohort=()">
     <meta name="description"
         content="Meet Falcon Concrete Creation, specialists in luxury wall finishes and lime plaster.">
+    <meta name="keywords" content="about Falcon Concrete Creation, luxury wall finish company, lime plaster experts, micro concrete specialists, decorative wall coating company, interior texture studio, exterior surface specialists, hand finished plaster, Goan wall finish company, architectural coatings company, mineral wall finish company, microcement wall specialists, terrazzo experts, epoxy flooring specialists, industrial flooring contractors, metallic flooring specialists, stucco finish experts, marble texture finish specialists, interior designers Goa, building finish contractors, concrete finish artisans, decorative plastering company, premium material finishers, luxury interior finishing, hospitality wall finishes, residential wall texture, commercial surface specialists, construction finishing experts, home renovation specialists, villa surface finishing, decorative surfaces Goa, concrete art finish, textured plaster company, wall design contractors, flooring solution company, custom interior finishes, facade texture specialists, stone effect wall finishes, premium wall coatings, polished concrete specialists, construction finishing solutions, wall restoration experts, luxury building finishes, design-led surface experts, mineral finish contractors, architectural surface company">
     <title>About Us | Falcon Concrete Creation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,26 +28,26 @@
                 plaster solutions</span><span class="d-none d-md-inline">Bespoke consultations available</span></div>
     </div>
     <nav class="navbar navbar-expand-lg site-nav">
-        <div class="container-fluid px-4 px-lg-5"><a class="navbar-brand" href="index.html"><img src="images/logo.jpg"
-                    alt="Falcon Concrete Creation logo"><span>FALCON<span> CONCRETE CREATION</span></span></a><button
-                class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><i
-                    class="bi bi-list"></i></button>
-            <div class="collapse navbar-collapse" id="nav">
-                <ul class="navbar-nav mx-auto gap-lg-4 mb-3 mb-lg-0">
-                    <li><a class="nav-link" data-nav="home" href="index.html">Home</a></li>
-                    <li><a class="nav-link" data-nav="about" href="about.html">About</a></li>
-                    <li><a class="nav-link" data-nav="services" href="services.html">Services</a></li>
-                    <li><a class="nav-link" data-nav="projects" href="projects.html">Projects</a></li>
-                    <li><a class="nav-link" data-nav="teams" href="teams.html">Team</a></li>
-                    <li><a class="nav-link" data-nav="pricing" href="pricing.html">Pricing</a></li>
-                    <li><a class="nav-link" data-nav="contact" href="contact.html">Contact</a></li>
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html" aria-label="Falcon Concrete Creation home">
+                <img src="images/logo.jpg" alt="Falcon Concrete Creation logo">
+                <span>FALCON<span> CONCRETE CREATION</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" data-nav="home" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-nav="about" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="services" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="projects" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="contact" href="contact.html">Contact</a></li>
                 </ul>
-                <div class="theme-switcher"><button class="theme-dot theme-ochre" data-theme-choice="ochre"
-                        aria-label="Ochre theme"></button><button class="theme-dot theme-forest"
-                        data-theme-choice="forest" aria-label="Forest theme"></button><button
-                        class="theme-dot theme-terracotta" data-theme-choice="terracotta"
-                        aria-label="Terracotta theme"></button><button class="theme-dot theme-blue"
-                        data-theme-choice="blue" aria-label="Blue theme"></button></div>
+                <div class="theme-switcher" aria-label="Colour theme">
+                    <button class="theme-dot theme-ochre" data-theme-choice="ochre" aria-label="Ochre theme"></button>
+                    <button class="theme-dot theme-forest" data-theme-choice="forest" aria-label="Forest theme"></button>
+                    <button class="theme-dot theme-terracotta" data-theme-choice="terracotta" aria-label="Terracotta theme"></button>
+                </div>
+                <a class="nav-link nav-action-link ms-lg-3" href="contact.html">Start a project <i class="bi bi-arrow-up-right ms-2"></i></a>
             </div>
         </div>
     </nav>

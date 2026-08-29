@@ -1,0 +1,281 @@
+:root {
+  --brochure-bg: #f4efe7;
+  --brochure-text: #171b18;
+  --brochure-card: #fffaf3;
+  --brochure-line: rgba(23, 27, 24, 0.12);
+  --brochure-accent: #b99147;
+}
+
+html[data-page=brochure] body {
+  margin: 0;
+  background: var(--brochure-bg);
+  color: var(--brochure-text);
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+html[data-page=brochure] .brochure-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 16px;
+  background: rgba(244, 239, 231, 0.95);
+  border-bottom: 1px solid var(--brochure-line);
+  backdrop-filter: blur(8px);
+}
+
+html[data-page=brochure] .brochure-nav a {
+  text-decoration: none;
+  color: var(--brochure-text);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+html[data-page=brochure] .brochure-nav a:hover {
+  background: rgba(23, 27, 24, 0.05);
+}
+
+html[data-page=brochure] .simple-brochure {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 28px 12px;
+}
+
+html[data-page=brochure] .brochure-cover-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 18px 0 10px;
+}
+
+html[data-page=brochure] .cover-panel {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(244,239,231,0.9));
+  border: 1px solid var(--brochure-line);
+  border-radius: 26px;
+  padding: clamp(22px, 3vw, 40px);
+  box-shadow: 0 18px 40px rgba(27, 25, 22, 0.08);
+}
+
+html[data-page=brochure] .cover-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 22px;
+  border-bottom: 2px solid var(--brochure-line);
+}
+
+html[data-page=brochure] .company-logo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid rgba(23, 27, 24, 0.12);
+  box-shadow: 0 12px 28px rgba(23, 27, 24, 0.08);
+}
+
+html[data-page=brochure] .cover-heading-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+html[data-page=brochure] .cover-kicker {
+  margin: 0 0 10px;
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(23, 27, 24, 0.7);
+}
+
+html[data-page=brochure] h1 {
+  margin: 0;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+  font-size: clamp(3rem, 5vw, 6.4rem);
+  text-transform: uppercase;
+  text-align: right;
+}
+
+html[data-page=brochure] .cover-summary {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 26px;
+  align-items: end;
+  padding: 28px 0 20px;
+}
+
+html[data-page=brochure] .tagline {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.8vw, 2rem);
+  line-height: 1.4;
+  max-width: 760px;
+}
+
+html[data-page=brochure] .feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+html[data-page=brochure] .feature-pills span {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(185, 145, 71, 0.12);
+  border: 1px solid rgba(185, 145, 71, 0.24);
+  color: var(--brochure-text);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+html[data-page=brochure] .cover-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  padding-top: 18px;
+  border-top: 1px solid var(--brochure-line);
+}
+
+html[data-page=brochure] .cover-details p {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.5vw, 1.5rem);
+  line-height: 1.7;
+}
+
+html[data-page=brochure] .label {
+  margin-bottom: 10px !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(23, 27, 24, 0.65);
+}
+
+html[data-page=brochure] .service-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0 0 24px;
+}
+
+html[data-page=brochure] .preview-card {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--brochure-line);
+  border-radius: 20px;
+  padding: 22px 20px;
+}
+
+html[data-page=brochure] .preview-number {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: rgba(23, 27, 24, 0.65);
+  margin-bottom: 12px;
+}
+
+html[data-page=brochure] .preview-card h3 {
+  margin: 0 0 10px;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+html[data-page=brochure] .preview-card p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(23, 27, 24, 0.82);
+}
+
+html[data-page=brochure] .gallery-section {
+  padding-top: 12px;
+}
+
+html[data-page=brochure] .work-group {
+  margin-bottom: 34px;
+  padding: 18px 0 2px;
+  border-top: 2px solid var(--brochure-line);
+}
+
+html[data-page=brochure] .work-group h2 {
+  margin: 0 0 16px;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+html[data-page=brochure] .work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+html[data-page=brochure] .work-grid img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 18px rgba(20, 18, 14, 0.08);
+  background: #ddd;
+}
+
+@media (max-width: 991px) {
+  html[data-page=brochure] .work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  html[data-page=brochure] .simple-brochure {
+    padding: 18px 16px 10px;
+  }
+
+  html[data-page=brochure] .cover-brand-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  html[data-page=brochure] h1 {
+    text-align: left;
+  }
+
+  html[data-page=brochure] .cover-details {
+    grid-template-columns: 1fr;
+  }
+
+  html[data-page=brochure] .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media print {
+  html[data-page=brochure] body {
+    background: #fff;
+  }
+
+  html[data-page=brochure] .simple-brochure {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  html[data-page=brochure] .work-grid img {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}

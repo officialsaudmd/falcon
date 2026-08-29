@@ -4,8 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me https://api.whatsapp.com; img-src 'self' data: blob: https://images.unsplash.com https://images.unsplash.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self'; media-src 'self'; frame-src 'none'; upgrade-insecure-requests">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), interest-cohort=()">
     <meta name="description"
         content="Luxury wall finishes, lime plaster and specialist flooring by Falcon Concrete Creation.">
+    <meta name="keywords" content="lime plaster services, micro concrete wall services, micro concrete flooring services, epoxy flooring services, industrial flooring services, metallic flooring services, 3D flooring services, terrazzo flooring services, marble texture exterior services, stucco finish services, wall texture services, decorative plaster services, luxury wall finish services, interior wall finishing, exterior wall finish, residential wall textures, commercial flooring services, hospitality wall finishes, villa wall coatings, office interior finishes, hotel surface finishes, facade texture services, stone finish services, architectural coatings, concrete restoration, wall resurfacing, mineral wall service, plastering contractor Goa, concrete floor contractor, decorative flooring contractor, premium interior surfaces, floor finishing contractor, tile and stucco service, plaster wall repair, textured surface contractor, luxury interior makeover, luxury concrete finishes, anti-skid flooring, microcement service, seamless flooring installation, polished concrete service, terrazzo contractor, epoxy floor contractor, industrial concrete floor service, stucco contractor, marble finish contractor, stone texture services, custom decorative wall finish, mineral finish installation, premium flooring solutions, wall coating contractor, decorative concrete contractor, Goan surface specialists, hand finished plaster service, texture coating services">
     <title>Services | Falcon Concrete Creation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,26 +28,26 @@
                 plaster solutions</span><span class="d-none d-md-inline">Bespoke consultations available</span></div>
     </div>
     <nav class="navbar navbar-expand-lg site-nav">
-        <div class="container-fluid px-4 px-lg-5"><a class="navbar-brand" href="index.html"><img src="images/logo.jpg"
-                    alt="Falcon Concrete Creation logo"><span>FALCON<span> CONCRETE CREATION</span></span></a><button
-                class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation"><i
-                    class="bi bi-list"></i></button>
-            <div class="collapse navbar-collapse" id="nav">
-                <ul class="navbar-nav mx-auto gap-lg-3 mb-3 mb-lg-0">
-                    <li><a class="nav-link" href="index.html">Home</a></li>
-                    <li><a class="nav-link" href="about.html">About</a></li>
-                    <li><a class="nav-link active" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li><a class="nav-link" href="teams.html">Team</a></li>
-                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html" aria-label="Falcon Concrete Creation home">
+                <img src="images/logo.jpg" alt="Falcon Concrete Creation logo">
+                <span>FALCON<span> CONCRETE CREATION</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" data-nav="home" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="about" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-nav="services" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="projects" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="contact" href="contact.html">Contact</a></li>
                 </ul>
-                <div class="theme-switcher"><button class="theme-dot theme-ochre" data-theme-choice="ochre"
-                        aria-label="Ochre theme"></button><button class="theme-dot theme-forest"
-                        data-theme-choice="forest" aria-label="Forest theme"></button><button
-                        class="theme-dot theme-terracotta" data-theme-choice="terracotta"
-                        aria-label="Terracotta theme"></button><button class="theme-dot theme-blue"
-                        data-theme-choice="blue" aria-label="Blue theme"></button></div>
+                <div class="theme-switcher" aria-label="Colour theme">
+                    <button class="theme-dot theme-ochre" data-theme-choice="ochre" aria-label="Ochre theme"></button>
+                    <button class="theme-dot theme-forest" data-theme-choice="forest" aria-label="Forest theme"></button>
+                    <button class="theme-dot theme-terracotta" data-theme-choice="terracotta" aria-label="Terracotta theme"></button>
+                </div>
+                <a class="nav-link nav-action-link ms-lg-3" href="contact.html">Start a project <i class="bi bi-arrow-up-right ms-2"></i></a>
             </div>
         </div>
     </nav>
@@ -59,7 +64,7 @@
             <div class="container-fluid px-4 px-lg-5">
                 <div class="row g-3">
                     <div class="col-md-6 col-lg-3">
-                        <article class="service-card"><img src="images/services/lime-plaster.jpg"
+                        <article class="service-card"><img src="images/limeplasterwallandceilings/IMG-20250419-WA0038.jpg"
                                 alt="Textured lime plaster wall">
                             <div class="service-card-body"><span>01</span>
                                 <h2>Lime plaster</h2>
@@ -69,7 +74,7 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <article class="service-card"><img src="images/services/micro-concrete-wall.jpg"
+                        <article class="service-card"><img src="images/microconceretewallfinishexteriorandinterior_/20260822_171430.jpg"
                                 alt="Micro concrete wall finish">
                             <div class="service-card-body"><span>02</span>
                                 <h2>Micro concrete wall</h2>
@@ -102,8 +107,14 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <article class="service-card"><img src="images/services/epoxy-flooring.jpg"
-                                alt="Epoxy industrial flooring">
+                        <article class="service-card" style="overflow:hidden;">
+                            <div style="display:grid;grid-template-rows:1fr 1fr;gap:0;height:220px;">
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80" alt="Epoxy floor finish sample 1" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+                                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Epoxy floor finish sample 2" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Epoxy floor finish sample 3" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                </div>
+                            </div>
                             <div class="service-card-body"><span>05</span>
                                 <h2>Epoxy flooring</h2>
                                 <p>Resilient, seamless protection for demanding commercial spaces.</p><a
@@ -113,8 +124,14 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <article class="service-card"><img src="images/services/metallic-flooring.jpg"
-                                alt="Metallic decorative floor finish">
+                        <article class="service-card" style="overflow:hidden;">
+                            <div style="display:grid;grid-template-rows:1fr 1fr;gap:0;height:220px;">
+                                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Metallic flooring sample 1" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+                                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Metallic flooring sample 2" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Metallic flooring sample 3" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                </div>
+                            </div>
                             <div class="service-card-body"><span>06</span>
                                 <h2>Metallic & 3D flooring</h2>
                                 <p>Expressive depth and reflective movement for statement spaces.</p><a
@@ -124,8 +141,14 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <article class="service-card"><img src="images/services/industrial-flooring.jpg"
-                                alt="Industrial floor surface">
+                        <article class="service-card" style="overflow:hidden;">
+                            <div style="display:grid;grid-template-rows:1fr 1fr;gap:0;height:220px;">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Industrial flooring sample 1" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+                                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80" alt="Industrial flooring sample 2" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80" alt="Industrial flooring sample 3" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                </div>
+                            </div>
                             <div class="service-card-body"><span>07</span>
                                 <h2>Industrial flooring</h2>
                                 <p>Built for impact, traffic and the everyday demands of work.</p><a
@@ -135,8 +158,14 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <article class="service-card"><img src="images/services/stucco-tiles.jpg"
-                                alt="Stucco wall and tile finish">
+                        <article class="service-card" style="overflow:hidden;">
+                            <div style="display:grid;grid-template-rows:1fr 1fr;gap:0;height:220px;">
+                                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Stucco and tile sample 1" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+                                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Stucco and tile sample 2" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80" alt="Stucco and tile sample 3" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                </div>
+                            </div>
                             <div class="service-card-body"><span>08</span>
                                 <h2>Stucco & tile work</h2>
                                 <p>Decorative wall finishes and precise tile installation, beautifully resolved.</p><a
@@ -146,8 +175,14 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <article class="service-card"><img src="images/services/marble-exterior.jpg"
-                                alt="Marble texture finish for an exterior wall">
+                        <article class="service-card" style="overflow:hidden;">
+                            <div style="display:grid;grid-template-rows:1fr 1fr;gap:0;height:220px;">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="Marble exterior sample 1" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+                                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Marble exterior sample 2" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Marble exterior sample 3" style="display:block;width:100%;height:110px;object-fit:cover;">
+                                </div>
+                            </div>
                             <div class="service-card-body"><span>09</span>
                                 <h2>Marble texture exterior</h2>
                                 <p>Weather-ready decorative texture for distinctive exterior walls and facades.</p><a

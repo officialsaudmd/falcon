@@ -4,8 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me https://api.whatsapp.com; img-src 'self' data: blob: https://images.unsplash.com https://images.unsplash.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self'; media-src 'self'; frame-src 'none'; upgrade-insecure-requests">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), interest-cohort=()">
     <meta name="description"
         content="Clients and collaborators of Falcon Concrete Creation across residential, hospitality and commercial spaces.">
+    <meta name="keywords" content="Falcon Concrete Creation clients, luxury wall finish clients, residential interior clients, hospitality clients, commercial flooring clients, Goa interior clients, lime plaster clients, micro concrete clients, epoxy flooring clients, terrazzo clients, stucco finish clients, marble texture clients, premium building finish clients, architectural finish clients, design-led interior clients, project portfolio clients, hotel renovation clients, villa interior clients, office interior clients, luxury finish clientele, construction finish partners, surface design clients, high-end interior clients, decorative coatings clients, building finish clients, premium design clients, wall texture clients, concrete finish clients, flooring project clients, mineral finish clients, Goan architecture clients, property developer clients, bathroom and wall finish clients, hospitality décor clients, marble facade clients, interior transformation clients, premium finish collaborators, luxury surface clients, design and build clients, top construction clients">
     <meta name="theme-color" content="#1e211c">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Clients | Falcon Concrete Creation">
@@ -30,27 +35,26 @@
     </div>
     <nav class="navbar navbar-expand-lg site-nav">
         <div class="container-fluid px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html"><img src="images/logo.jpg"
-                    alt="Falcon Concrete Creation logo"><span>FALCON<span> CONCRETE CREATION</span></span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
-                aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
-            <div class="collapse navbar-collapse" id="nav">
-                <ul class="navbar-nav mx-auto gap-lg-3 mb-3 mb-lg-0">
-                    <li><a class="nav-link" href="index.html">Home</a></li>
-                    <li><a class="nav-link" href="about.html">About</a></li>
-                    <li><a class="nav-link" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li><a class="nav-link" href="teams.html">Team</a></li>
-                    <li><a class="nav-link active" data-nav="clients" href="clients.html">Clients</a></li>
-                    <li><a class="nav-link" href="quotation.html">Quote</a></li>
-                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+            <a class="navbar-brand" href="index.html" aria-label="Falcon Concrete Creation home">
+                <img src="images/logo.jpg" alt="Falcon Concrete Creation logo">
+                <span>FALCON<span> CONCRETE CREATION</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" data-nav="home" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="about" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="services" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="projects" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-nav="clients" href="clients.html">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" data-nav="contact" href="contact.html">Contact</a></li>
                 </ul>
-                <div class="theme-switcher"><button class="theme-dot theme-ochre" data-theme-choice="ochre"
-                        aria-label="Ochre theme"></button><button class="theme-dot theme-forest"
-                        data-theme-choice="forest" aria-label="Forest theme"></button><button
-                        class="theme-dot theme-terracotta" data-theme-choice="terracotta"
-                        aria-label="Terracotta theme"></button><button class="theme-dot theme-blue"
-                        data-theme-choice="blue" aria-label="Blue theme"></button></div>
+                <div class="theme-switcher" aria-label="Colour theme">
+                    <button class="theme-dot theme-ochre" data-theme-choice="ochre" aria-label="Ochre theme"></button>
+                    <button class="theme-dot theme-forest" data-theme-choice="forest" aria-label="Forest theme"></button>
+                    <button class="theme-dot theme-terracotta" data-theme-choice="terracotta" aria-label="Terracotta theme"></button>
+                </div>
+                <a class="nav-link nav-action-link ms-lg-3" href="contact.html">Start a project <i class="bi bi-arrow-up-right ms-2"></i></a>
             </div>
         </div>
     </nav>
@@ -76,7 +80,6 @@
                         <div class="client-grid" aria-label="Selected clients">
                             <div class="client-mark"><span>VIANAAR</span><small>HOMES</small></div>
                             <div class="client-mark"><span>ISPARAVA</span><small>VESTA</small></div>
-                            <div class="client-mark"><span>ISPARAVA</span><small>DECOR</small></div>
                             <div class="client-mark"><span>SOKA</span><small>VILLA</small></div>
                             <div class="client-mark"><span>BEST LOCATION</span><small>PROPERTIES</small></div>
                             <div class="client-mark"><span>SIGNATURE</span><small>HOME</small></div>
@@ -87,11 +90,6 @@
                             <div class="client-mark"><span>RICCO</span><small>CONSTRUCTION</small></div>
                             <div class="client-mark"><span>UNDERSOUND</span><small>ENTERTAINMENT</small></div>
                             <div class="client-mark"><span>ANAROCK</span><small></small></div>
-                            <div class="client-mark"><span>ATREYA</span><small>SHIPYARD</small></div>
-                            <div class="client-mark"><span>AADHVAY</span><small>VENTURE</small></div>
-                            <div class="client-mark"><span>MAJESTIC</span><small>PRIDE</small></div>
-                            <div class="client-mark"><span>RITZ</span><small>CLASSIC</small></div>
-                            <div class="client-mark"><span>SOLANKI</span><small>&amp; SONS</small></div>
                         </div>
                     </div>
                 </div>
