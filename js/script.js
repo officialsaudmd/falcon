@@ -166,13 +166,12 @@ const userWorkImages = {
   'lime-plaster': ['20250926_152354.jpg', '20251015_112328.jpg', '20251015_112334.jpg', '20260119_204005.jpg', 'IMG-20250225-WA0015.jpg', 'IMG-20250225-WA0027.jpg', 'IMG-20250225-WA0029.jpg', 'IMG-20250419-WA0038.jpg', 'IMG-20250419-WA0041.jpg', 'IMG-20251115-WA0005.jpg', 'IMG-20251218-WA0002.jpg', 'IMG-20260217-WA0019.jpg', 'IMG-20260407-WA0060.jpg', 'IMG-20260407-WA0063.jpg'].map((file) => `images/limeplasterwallandceilings/${file}`),
   'micro-concrete-wall': ['20251103_104541.jpg', '20260727_135655.jpg', '20260727_135701.jpg', '20260822_171146.jpg', '20260822_171153.jpg', '20260822_171334.jpg', '20260822_171430.jpg', 'IMG-20250325-WA0006.jpg', 'IMG-20250325-WA0007.jpg', 'IMG-20260718-WA0049.jpg', 'IMG-20260810-WA0029.jpg'].map((file) => `images/microconceretewallfinishexteriorandinterior_/${file}`),
   'micro-concrete-floor': Array.from({ length: 9 }, (_, index) => `images/microconcereteflooring/concrete_floor (${index + 1}).jpg`),
-  'epoxy-flooring': ['IMG-20251002-WA0019.jpg', 'IMG-20251002-WA0026.jpg', 'IMG-20251002-WA0037.jpg', 'IMG-20251004-WA0098.jpg', 'IMG-20251004-WA0111.jpg', 'IMG-20251004-WA0114.jpg', 'IMG-20251004-WA0117.jpg', 'IMG-20251004-WA0118.jpg', 'IMG-20251004-WA0120.jpg', 'IMG-20251025-WA0004.jpg', 'IMG-20251025-WA0006.jpg'].map((file) => `images/epoxyflooring/${file}`),
+  'epoxy-flooring': ['IMG-20251004-WA0098.jpg', 'IMG-20251004-WA0111.jpg', 'IMG-20251004-WA0114.jpg', 'IMG-20251004-WA0117.jpg', 'IMG-20251004-WA0118.jpg', 'IMG-20251004-WA0120.jpg', 'IMG-20251025-WA0004.jpg', 'IMG-20251025-WA0006.jpg'].map((file) => `images/epoxyflooring/${file}`),
   'stucco-tile': ['Screenshot_20250712_164712_Instagram.jpg', 'Screenshot_20250712_174329_Instagram.jpg', 'Screenshot_20250712_174335_Instagram.jpg', 'Screenshot_20250712_174339_Instagram.jpg', 'Screenshot_20250712_192939_Instagram.jpg', 'Screenshot_20250712_193324_Instagram.jpg'].map((file) => `images/stuccopaintmarbelfinish/${file}`),
   'marble-exterior': [
-    'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1617104678098-c0d6ecf53d8c?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80'
+    'images/marbletexture/080aa614-26f6-4c05-bae9-c837bbcd4712.jpg',
+    'images/marbletexture/5a0cc22c-291d-4565-a620-dbaaff348d7b.jpg',
+    'images/marbletexture/5ff629e9-93fe-49e4-9d32-a5712a7a2e5c.jpg'
   ],
   'metallic-3d-flooring': [
     'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80',
@@ -181,16 +180,15 @@ const userWorkImages = {
     'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80'
   ],
   'industrial-flooring': [
-    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80'
+    'images/epoxyflooring/IMG-20251002-WA0019.jpg', 
+    'images/epoxyflooring/IMG-20251002-WA0026.jpg',
+    'images/epoxyflooring/IMG-20251002-WA0037.jpg'
   ],
   terrazzo: [
-    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80'
+    'images/tarazzo/tz (1).jpg',
+    'images/tarazzo/tz (2).jpg',
+    'images/tarazzo/tz (3).jpg',
+    'images/tarazzo/tz (4).jpg'
   ]
 };
 const serviceSlugs = ['lime-plaster', 'micro-concrete-wall', 'micro-concrete-floor', 'terrazzo', 'epoxy-flooring', 'metallic-3d-flooring', 'industrial-flooring', 'stucco-tile', 'marble-exterior'];
@@ -233,12 +231,12 @@ if (page === 'service-detail') {
     'lime-plaster': ['Lime plaster', 'Breathable, hand-worked mineral surfaces with soft tonal movement.', userWorkImages['lime-plaster']],
     'micro-concrete-wall': ['Micro concrete wall', 'Seamless mineral texture for sculptural, modern interiors.', userWorkImages['micro-concrete-wall']],
     'micro-concrete-floor': ['Micro concrete flooring', 'A continuous, refined floor finish shown across a completed interior installation.', userWorkImages['micro-concrete-floor']],
-    terrazzo: ['Terrazzo work', 'Crafted aggregate surfaces with a distinctive, lasting character.', userWorkImages.terrazzo],
+    terrazzo: ['Terrazzo', 'Crafted aggregate surfaces with a distinctive, lasting character.', userWorkImages.terrazzo],
     'epoxy-flooring': ['Epoxy flooring', 'Resilient, seamless protection for demanding commercial spaces.', userWorkImages['epoxy-flooring']],
     'metallic-3d-flooring': ['Metallic & 3D flooring', 'Expressive depth and reflective movement for statement spaces.', userWorkImages['metallic-3d-flooring']],
     'industrial-flooring': ['Industrial flooring', 'Built for impact, traffic and the everyday demands of work.', userWorkImages['industrial-flooring']],
     'stucco-tile': ['Stucco & tile work', 'Decorative wall finishes and precise tile installation, beautifully resolved.', userWorkImages['stucco-tile']],
-    'marble-exterior': ['Marble texture exterior', 'Weather-ready decorative texture for distinctive exterior walls and facades.', userWorkImages['marble-exterior']]
+    'marble-exterior': ['Marble texture', 'Weather-ready decorative texture for distinctive exterior walls and facades.', userWorkImages['marble-exterior']]
   };
   const selected = work[new URLSearchParams(window.location.search).get('type')] || work['micro-concrete-floor'];
   document.title = `${selected[0]} | Falcon Concrete Creation`;
