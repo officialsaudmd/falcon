@@ -49,18 +49,18 @@ if (seo) {
   });
 }
 const clientLogoFiles = {
-  VIANAAR: 'images/clients/cl (1).jpg',
-  ISPARAVA: 'images/clients/cl (2).jpg',
+  VIANAAR: 'images/clients/cl (11).jpg',
+  ISPARAVA: 'images/clients/cl (9).jpg',
   SOKA: 'images/clients/cl (3).jpg',
   'BEST LOCATION': 'images/clients/cl (4).jpg',
   SIGNATURE: 'images/clients/cl (5).jpg',
   MIRAAN: 'images/clients/cl (6).jpg',
-  'MILLION DOLLAR': 'images/clients/cl (7).jpg',
+  'MILLION DOLLAR': 'images/clients/cl (3).jpg',
   JAGLAX: 'images/clients/cl (8).jpg',
   AZUL: 'images/clients/cl (9).jpg',
   RICCO: 'images/clients/cl (10).jpg',
-  UNDERSOUND: 'images/clients/cl (11).jpg',
-  ANAROCK: 'images/clients/cl (12).jpg'
+  UNDERSOUND: 'images/clients/cl (2).jpg',
+  ANAROCK: 'images/clients/cl (4).jpg'
 };
 document.querySelectorAll('.client-mark').forEach((mark) => {
   const name = mark.querySelector('span')?.textContent.trim();
