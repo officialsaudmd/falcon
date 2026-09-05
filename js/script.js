@@ -166,13 +166,9 @@ const userWorkImages = {
   'lime-plaster': ['20250926_152354.jpg', '20251015_112328.jpg', '20251015_112334.jpg', '20260119_204005.jpg', 'IMG-20250225-WA0015.jpg', 'IMG-20250225-WA0027.jpg', 'IMG-20250225-WA0029.jpg', 'IMG-20250419-WA0038.jpg', 'IMG-20250419-WA0041.jpg', 'IMG-20251115-WA0005.jpg', 'IMG-20251218-WA0002.jpg', 'IMG-20260217-WA0019.jpg', 'IMG-20260407-WA0060.jpg', 'IMG-20260407-WA0063.jpg'].map((file) => `images/limeplasterwallandceilings/${file}`),
   'micro-concrete-wall': ['20251103_104541.jpg', '20260727_135655.jpg', '20260727_135701.jpg', '20260822_171146.jpg', '20260822_171153.jpg', '20260822_171334.jpg', '20260822_171430.jpg', 'IMG-20250325-WA0006.jpg', 'IMG-20250325-WA0007.jpg', 'IMG-20260718-WA0049.jpg', 'IMG-20260810-WA0029.jpg'].map((file) => `images/microconceretewallfinishexteriorandinterior_/${file}`),
   'micro-concrete-floor': Array.from({ length: 9 }, (_, index) => `images/microconcereteflooring/concrete_floor (${index + 1}).jpg`),
-  'epoxy-flooring': ['IMG-20251004-WA0098.jpg', 'IMG-20251004-WA0111.jpg', 'IMG-20251004-WA0114.jpg', 'IMG-20251004-WA0117.jpg', 'IMG-20251004-WA0118.jpg', 'IMG-20251004-WA0120.jpg', 'IMG-20251025-WA0004.jpg', 'IMG-20251025-WA0006.jpg'].map((file) => `images/epoxyflooring/${file}`),
+  'epoxy-flooring': ['IMG-20251002-WA0019.jpg', 'IMG-20251002-WA0026.jpg', 'IMG-20251002-WA0037.jpg', 'IMG-20251004-WA0098.jpg', 'IMG-20251004-WA0111.jpg', 'IMG-20251004-WA0114.jpg', 'IMG-20251004-WA0117.jpg', 'IMG-20251004-WA0118.jpg', 'IMG-20251004-WA0120.jpg', 'IMG-20251025-WA0004.jpg', 'IMG-20251025-WA0006.jpg'].map((file) => `images/epoxyflooring/${file}`),
   'stucco-tile': ['Screenshot_20250712_164712_Instagram.jpg', 'Screenshot_20250712_174329_Instagram.jpg', 'Screenshot_20250712_174335_Instagram.jpg', 'Screenshot_20250712_174339_Instagram.jpg', 'Screenshot_20250712_192939_Instagram.jpg', 'Screenshot_20250712_193324_Instagram.jpg'].map((file) => `images/stuccopaintmarbelfinish/${file}`),
-  'marble-exterior': [
-    'images/marbletexture/080aa614-26f6-4c05-bae9-c837bbcd4712.jpg',
-    'images/marbletexture/5a0cc22c-291d-4565-a620-dbaaff348d7b.jpg',
-    'images/marbletexture/5ff629e9-93fe-49e4-9d32-a5712a7a2e5c.jpg'
-  ],
+  'marble-exterior': Array.from({ length: 9 }, (_, index) => `images/marbletexture/mb (${index + 1}).jpeg`),
   'metallic-3d-flooring': [
     'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80',
     'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80',
