@@ -168,12 +168,21 @@ const userWorkImages = {
   'micro-concrete-floor': Array.from({ length: 9 }, (_, index) => `images/microconcereteflooring/concrete_floor (${index + 1}).jpg`),
   'epoxy-flooring': ['IMG-20251002-WA0019.jpg', 'IMG-20251002-WA0026.jpg', 'IMG-20251002-WA0037.jpg', 'IMG-20251004-WA0098.jpg', 'IMG-20251004-WA0111.jpg', 'IMG-20251004-WA0114.jpg', 'IMG-20251004-WA0117.jpg', 'IMG-20251004-WA0118.jpg', 'IMG-20251004-WA0120.jpg', 'IMG-20251025-WA0004.jpg', 'IMG-20251025-WA0006.jpg'].map((file) => `images/epoxyflooring/${file}`),
   'stucco-tile': ['Screenshot_20250712_164712_Instagram.jpg', 'Screenshot_20250712_174329_Instagram.jpg', 'Screenshot_20250712_174335_Instagram.jpg', 'Screenshot_20250712_174339_Instagram.jpg', 'Screenshot_20250712_192939_Instagram.jpg', 'Screenshot_20250712_193324_Instagram.jpg'].map((file) => `images/stuccopaintmarbelfinish/${file}`),
-  'marble-exterior': Array.from({ length: 9 }, (_, index) => `images/marbletexture/mb (${index + 1}).jpeg`),
+  'marble-exterior': [
+    'images/marbletexture/mt (1).jpeg',
+    'images/marbletexture/mt (2).jpeg',
+    'images/marbletexture/mt (3).jpeg'
+  ],
   'metallic-3d-flooring': [
-    'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80'
+    'images/metallic3dflooring/mb (1).jpeg',
+    'images/metallic3dflooring/mb (2).jpeg',
+    'images/metallic3dflooring/mb (3).jpeg',
+    'images/metallic3dflooring/mb (4).jpeg',
+    'images/metallic3dflooring/mb (5).jpeg',
+    'images/metallic3dflooring/mb (6).jpeg',
+    'images/metallic3dflooring/mb (7).jpeg',
+    'images/metallic3dflooring/mb (8).jpeg',
+    'images/metallic3dflooring/mb (9).jpeg'
   ],
   'industrial-flooring': [
     'images/epoxyflooring/IMG-20251002-WA0019.jpg', 
