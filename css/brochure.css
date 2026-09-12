@@ -61,20 +61,23 @@ html[data-page=brochure] .cover-panel {
   border-radius: 26px;
   padding: clamp(22px, 3vw, 40px);
   box-shadow: 0 18px 40px rgba(27, 25, 22, 0.08);
+  overflow: hidden;
 }
 
 html[data-page=brochure] .cover-brand-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 18px;
   padding-bottom: 22px;
   border-bottom: 2px solid var(--brochure-line);
+  text-align: center;
 }
 
 html[data-page=brochure] .company-logo {
-  width: 110px;
-  height: 110px;
+  width: 128px;
+  height: 128px;
   object-fit: cover;
   border-radius: 20px;
   border: 2px solid rgba(23, 27, 24, 0.12);
@@ -84,7 +87,9 @@ html[data-page=brochure] .company-logo {
 html[data-page=brochure] .cover-heading-wrap {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 html[data-page=brochure] .cover-kicker {
@@ -103,26 +108,27 @@ html[data-page=brochure] h1 {
   line-height: 0.9;
   font-size: clamp(3rem, 5vw, 6.4rem);
   text-transform: uppercase;
-  text-align: right;
+  text-align: center;
 }
 
 html[data-page=brochure] .cover-summary {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 26px;
-  align-items: end;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
   padding: 28px 0 20px;
 }
 
 html[data-page=brochure] .cover-visual {
   width: 100%;
-  margin: 22px 0 18px;
+  margin: 10px 0 18px;
 }
 
 html[data-page=brochure] .cover-visual img {
   display: block;
   width: 100%;
-  max-height: 440px;
+  max-height: 340px;
+  height: 340px;
   object-fit: cover;
   border-radius: 24px;
   border: 1px solid var(--brochure-line);
@@ -140,6 +146,10 @@ html[data-page=brochure] .feature-pills {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 10px;
+}
+
+html[data-page=brochure] .cover-summary > div:first-child {
+  min-width: 0;
 }
 
 html[data-page=brochure] .feature-pills span {
@@ -277,19 +287,106 @@ html[data-page=brochure] .work-grid img {
   }
 }
 
+@page {
+  size: A4 portrait;
+  margin: 8mm;
+}
+
 @media print {
   html[data-page=brochure] body {
     background: #fff;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    overflow: visible;
+  }
+
+  html[data-page=brochure] .brochure-nav {
+    display: none !important;
   }
 
   html[data-page=brochure] .simple-brochure {
     max-width: none;
+    width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  html[data-page=brochure] .brochure-cover-page {
+    min-height: auto;
+    padding: 0;
+    page-break-after: avoid;
+  }
+
+  html[data-page=brochure] .cover-panel,
+  html[data-page=brochure] .preview-card,
+  html[data-page=brochure] .work-group {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    overflow: visible;
+  }
+
+  html[data-page=brochure] .cover-panel {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid #d7d0c5;
+    padding: 14mm 12mm 10mm;
+  }
+
+  html[data-page=brochure] .cover-brand-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 12px;
+  }
+
+  html[data-page=brochure] .cover-summary {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px 0 12px;
+  }
+
+  html[data-page=brochure] .tagline {
+    max-width: 100%;
+  }
+
+  html[data-page=brochure] .feature-pills {
+    justify-content: center;
+  }
+
+  html[data-page=brochure] .cover-details {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  html[data-page=brochure] .cover-visual {
+    margin: 8px 0 10px;
+  }
+
+  html[data-page=brochure] .cover-visual img {
+    max-height: none;
+    height: 230px;
+  }
+
+  html[data-page=brochure] .service-preview {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0 0 16px;
+  }
+
+  html[data-page=brochure] .preview-card {
+    padding: 12px 14px;
+  }
+
+  html[data-page=brochure] .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   html[data-page=brochure] .work-grid img {
     box-shadow: none;
     border-radius: 0;
+    height: 150px;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
